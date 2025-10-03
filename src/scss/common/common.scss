@@ -11,11 +11,15 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 130%;
     background-color: $white;
 
     &._noscroll {
         overflow: hidden;
+    }
+
+    @media (max-width:1024px) {
+        font-size: 14px;
     }
 }
 
@@ -42,6 +46,10 @@ main {
     @media (max-width: $containerWithPadding + px) {
         max-width: none;
         padding-inline: $padding + px;
+    }
+
+    @media (max-width:1240px) {
+        padding-inline: 15px;
     }
 }
 
@@ -72,10 +80,10 @@ h1 {
 h2 {
     @include adaptive-value('font-size', 60, 28, 1);
     line-height: 1;
-    letter-spacing: -1.2;
+    letter-spacing: -1.2px;
 
     @media (max-width:1024px) {
-        letter-spacing: -0.6;
+        letter-spacing: -0.6px;
     }
 
     label {
@@ -97,7 +105,7 @@ h4 {
     line-height: 1.2;
 
     @media (max-width:1024px) {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -114,6 +122,22 @@ h4 {
         letter-spacing: -1px;
         text-transform: uppercase;
     }
+
+    @media (max-width:1024px) {
+        @include adaptive-value('font-size', 60, 28, 1);
+        line-height: 1;
+        letter-spacing: -1.2px;
+
+        @media (max-width:1024px) {
+            letter-spacing: -0.6px;
+        }
+    }
+}
+
+._titles_label {
+    background-color: $accent_10;
+    padding: 10px 15px;
+    border-radius: 50px;
 }
 
 ._small_uppercase {
@@ -130,4 +154,169 @@ h4 {
     @include adaptive-value('font-size', 36, 26, 1);
     font-weight: 500;
     line-height: 1.1;
+
+    label {
+        color: $accent;
+    }
+}
+
+._btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 4px;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.1px;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width:1024px) {
+        height: 54px;
+        font-size: 14px;
+    }
+
+    @media (max-width:425px) {
+        padding-inline: 15px;
+    }
+
+    // ._btn-accent
+    &-accent {
+        color: $white;
+        background-color: $accent;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_hover;
+            }
+        }
+    }
+
+    // ._btn-white
+    &-white {
+        color: $accent;
+        background-color: $white;
+        border: 1px solid $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: unset;
+                color: $white;
+            }
+        }
+    }
+
+    // ._btn-grey-stroke
+    &._btn-grey-stroke {
+        border: 1px solid $stroke_light_grey;
+        color: $accent;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+                color: $white;
+                border-color: $accent;
+            }
+        }
+    }
+
+    // ._btn-white-stroke
+    &._btn-white-stroke {
+        border: 1px solid $stroke_white_15;
+        color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $white;
+            }
+        }
+    }
+}
+
+._desktop {
+    @media (max-width:1024px) {
+        display: none;
+    }
+}
+
+._mobile {
+    @media (min-width:1025px) {
+        display: none;
+    }
+}
+
+.swiper-controll {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 40px;
+
+    @media (max-width:1024px) {
+        margin-top: 30px;
+    }
+
+    button {
+        width: 54px;
+        height: 54px;
+        border-radius: 4px;
+        transition: all 0.3s ease 0s;
+
+        &:not(.swiper-button-disabled) {
+            background-color: $soft_blue;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $accent;
+                    border-color: $accent;
+
+                    svg {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        &.swiper-button-disabled {
+            border-radius: 4px;
+            border: 1px solid $stroke_light_grey;
+            opacity: 0.5;
+        }
+
+        svg {
+            fill: $accent;
+        }
+    }
+}
+
+.opening-hours {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @media (max-width:768px) {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    label {
+        color: $white_50;
+
+        @media (min-width:769px) {
+            margin-top: 4px;
+        }
+    }
+
+    p {
+        color: $white;
+        font-size: 16px;
+
+        @media (max-width:1024px) {
+            font-size: 14px;
+        }
+    }
 }

@@ -1,41 +1,123 @@
 .accordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+
+    @media (max-width:1024px) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
     // .accordion__item
-
     &__item {
+        height: fit-content;
+        padding: 20px;
+        border-radius: 4px;
+        background-color: $soft_blue;
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_10;
+            }
+        }
+
+        @media (max-width:1024px) {
+            padding: 15px;
+        }
+
         &[data-open] {
+            background-color: $accent;
+
+            h4 {
+                color: $white;
+            }
+
+            .accordion__item-title {
+                div {
+                    span {
+                        background-color: $white;
+                    }
+
+                    & > :last-child {
+                        transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                }
+            }
+
             .accordion__item-content {
                 grid-template-rows: 1fr;
+                margin-top: 20px;
+
+                @media (max-width:1024px) {
+                    margin-top: 15px;
+                }
             }
         }
 
         // .accordion__item-title
-
         &-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
             cursor: pointer;
 
             * {
                 pointer-events: none;
             }
 
+            h4 {
+                width: 100%;
+            }
+
+            div {
+                min-width: 24px;
+                height: 24px;
+                position: relative;
+                pointer-events: none;
+
+                span {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 24px;
+                    height: 1px;
+                    background-color: $default;
+                }
+
+                & > :last-child {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
         }
 
         // .accordion__item-content
-
         &-content {
             display: grid;
             grid-template-rows: 0fr;
             transition: grid-template-rows 0.3s;
+            transition: all 0.3s ease 0s;
 
             // .accordion__item-content-height
-
             &-height {
                 overflow: hidden;
+
+                p {
+                    color: $white_50;
+
+                    @media (min-width:769px) {
+                        max-width: 75%;
+                    }
+                }
             }
         }
     }
 
     // .accordion__open
-
     &__open {}
 }

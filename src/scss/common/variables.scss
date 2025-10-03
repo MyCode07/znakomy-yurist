@@ -1,19 +1,16 @@
-$container: 1280;
-$padding: 15;
+$container: 1920;
+$padding: 40;
 $containerWithPadding: $container + ($padding * 2);
-
 // lines
-$sroke_light_grey: #DAE0E9;
-$sroke_white_15: rgba(255, 255, 255, 0.15);
-$sroke_blue: #000632;
-
+$stroke_light_grey: #DAE0E9;
+$stroke_white_15: rgba(255, 255, 255, 0.15);
+$stroke_blue: #000632;
 // Text colors
 $accent: #215387;
 $default: #000632;
 $secondary: #666984;
 $white: #ffffff;
-$white_50rgba: rgba(255, 255, 255, 0.50);
-
+$white_50: rgba(255, 255, 255, 0.50);
 // Background colors
 $accent_10: rgba(33, 83, 135, 0.10);
 $accent_hover: #143252;

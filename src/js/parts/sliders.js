@@ -9,107 +9,7 @@ if (sliders.length) {
         const next = section.querySelector('.next');
         const pagination = section.querySelector('.pagination');
 
-        if (slider.closest('.clients')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                slidesPerView: 4,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-            });
-        }
-
-
-        if (slider.closest('.reviews')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-
-                breakpoints: {
-                    769: {
-                        slidesPerView: 4,
-                    },
-                    300: {
-                        slidesPerView: 2,
-                    }
-                }
-            });
-        }
-
-        if (slider.closest('.single-product')) {
-            const thumbs = new Swiper('.slider-small', {
-                modules: [
-                    FreeMode
-                ],
-                freeMode: true,
-                watchSlidesProgress: true,
-                slidesPerView: 'auto',
-                spaceBetween: 8,
-            });
-
-            new Swiper('.slider-big', {
-                modules: [
-                    Thumbs, Navigation
-                ],
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-                spaceBetween: 10,
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: thumbs,
-                },
-            });
-        }
-
-        if (slider.closest('.related')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-
-                breakpoints: {
-                    769: {
-                        slidesPerView: 4,
-                    },
-                    300: {
-                        slidesPerView: 2,
-                    }
-                }
-            });
-        }
-
-        if (slider.closest('.case-images')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                slidesPerView: 1,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-            });
-        }
-
-        if (slider.closest('.case-products')) {
+        if (slider.closest('.about')) {
             new Swiper(slider, {
                 modules: [
                     Pagination
@@ -122,8 +22,39 @@ if (sliders.length) {
                 },
             });
         }
-        
+        if (slider.closest('.team')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation, Pagination
+                ],
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 15,
+
+                    },
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+
+                    },
+                    769: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+
+                    },
+                    1025: {
+                        slidesPerView: 4,
+                        spaceBetween: 15,
+                    },
+                }
+            });
+        }
+
     })
 }
-
-

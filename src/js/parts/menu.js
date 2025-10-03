@@ -8,6 +8,7 @@ const searchPopup = document.querySelector('.search');
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
+
     if (targetEl.classList.contains('header__burger')) {
         burger.classList.add('_active');
         menu.classList.add('_open');

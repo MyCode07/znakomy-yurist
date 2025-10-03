@@ -84,11 +84,10 @@ export const animateOrder = () => {
 
 }
 
-
-
 function getCoords(elem) {
     let box = elem.getBoundingClientRect();
 
     return box.top + window.pageYOffset;
 }
 
+ 
