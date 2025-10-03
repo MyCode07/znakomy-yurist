@@ -1,0 +1,34 @@
+._ticker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    background-color: $accent_hover;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 145%;
+    white-space: nowrap;
+
+    @media (max-width:768px) {
+        padding: 4px 0;
+        font-size: 10px;
+    }
+
+
+    // ._ticker-text
+
+    &-text {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        div {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}

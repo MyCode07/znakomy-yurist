@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-style: normal;
+    letter-spacing: normal;
+    color: $default;
+    font-family: "Inter Tight";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+    background-color: $white;
+
+    &._noscroll {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+._container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: $container + px;
+
+    @media (max-width: $containerWithPadding + px) {
+        max-width: none;
+        padding-inline: $padding + px;
+    }
+}
+
+img,
+svg,
+picture,
+figure {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1 {
+    color: $white;
+    @include adaptive-value('font-size', 50, 22, 1);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+h2 {
+    @include adaptive-value('font-size', 60, 28, 1);
+    line-height: 1;
+    letter-spacing: -1.2;
+
+    @media (max-width:1024px) {
+        letter-spacing: -0.6;
+    }
+
+    label {
+        color: $accent;
+    }
+
+    span {
+        color: $secondary;
+    }
+}
+
+h3 {
+    @include adaptive-value('font-size', 24, 18, 1);
+    line-height: 1.1;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 1.2;
+
+    @media (max-width:1024px) {
+        font-size: 18px;
+    }
+}
+
+._subtitle {
+    @include adaptive-value('font-size', 20, 16, 1);
+    line-height: 1.3;
+}
+
+._big_title {
+    @media (min-width:1025px) {
+        @include adaptive-value('font-size', 90, 50, 1);
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+}
+
+._small_uppercase {
+    font-size: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @media (max-width:1024px) {
+        font-size: 13px;
+    }
+}
+
+._big_text {
+    @include adaptive-value('font-size', 36, 26, 1);
+    font-weight: 500;
+    line-height: 1.1;
+}

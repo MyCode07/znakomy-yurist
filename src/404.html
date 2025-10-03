@@ -1,0 +1,38 @@
+@@include('./html/head.html', {
+"title":"Ошибка 404",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>404</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section error">
+        <div class="section__container _container">
+            <div class="section__body">
+                <span>404</span>
+                <h1>Кажется такой страницы не существует.</h1>
+                <p>Вернитесь на главную, чтобы продолжить покупки</p>
+                <a href="/" class="_btn _btn-accent">Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

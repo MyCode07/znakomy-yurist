@@ -1,0 +1,91 @@
+<header class="header">
+    @@include('ticker.html',{})
+
+    <div class="header__top">
+        <div class="_container">
+            <div class="header__top-body">
+                <div>
+                    <a href="" class="header__logo">
+                        <img src="@img/logo.svg" alt="">
+                    </a>
+                    <div class="header__location">
+                        Москва
+                    </div>
+                </div>
+                <div>
+                    <div class="header__phone">
+                        <a href="">8 (999) 99 99 109</a>
+                        <a href=""> 8 (999) 99 99 109 </a>
+                        <span>9:00-18:00 (пн-пт)</span>
+                    </div>
+                    <button class="header__btn _btn _btn-accent" data-open-popup="callback">Заказать звонок</button>
+                </div>
+
+                <button data-action data-open-search>
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <use xlink:href='img/svg/icons.svg#search' />
+                    </svg>
+                </button>
+                <button data-action data-open-cart>
+                    <svg width="18" height="18" viewBox="0 0 18 18">
+                        <use xlink:href='img/svg/icons.svg#cart' />
+                    </svg>
+                    <span data-cart-count>0</span>
+                </button>
+
+                <button class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="_container">
+            <div class="header__bottom-body">
+                <div class="header__catalog">
+                    <button class="_btn _btn-accent" data-open-catalog>
+                        <span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        Каталог
+                    </button>
+                    <ul>
+                        <li><a href="">Все товары</a></li>
+                        <li><a href="">Ленты</a></li>
+                        <li><a href="">Гибкий неон</a></li>
+                        <li><a href="">Линейки</a></li>
+                        <li><a href="">Модули</a></li>
+                        <li><a href="">Провода</a></li>
+                        <li><a href="">Блоки питания</a></li>
+                    </ul>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Доставка и оплата</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Кейсы</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button data-action data-open-search>
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                            <use xlink:href='img/svg/icons.svg#search' />
+                        </svg>
+                    </button>
+                    <button data-action data-open-cart>
+                        <svg width="18" height="18" viewBox="0 0 18 18">
+                            <use xlink:href='img/svg/icons.svg#cart' />
+                        </svg>
+                        <span data-cart-count>0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
