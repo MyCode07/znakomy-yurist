@@ -52,6 +52,19 @@
     }
 }
 
+.services li {
+    position: sticky;
+
+    @media (min-width:1025px) {
+        will-change: opacity, transform;
+        transform-style: preserve-3d;
+        position: sticky;
+        top: 190px;
+        // top: calc(var(--i) * 50px + 70px);
+        transform-origin: top;
+    }
+}
+
 .services-card {
     border-radius: 4px;
     overflow: hidden;
@@ -62,10 +75,11 @@
     grid-template-columns: repeat(2, 1fr);
     background-color: $white;
     transition: all 0.3s ease 0s;
+    margin-inline: auto;
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: $accent_10;
+            background-color: $accent;
         }
     }
 
@@ -158,7 +172,6 @@
             }
         }
     }
-
 }
 
 .advantages-card {

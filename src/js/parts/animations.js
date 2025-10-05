@@ -84,10 +84,39 @@ export const animateOrder = () => {
 
 }
 
-function getCoords(elem) {
-    let box = elem.getBoundingClientRect();
+export const animateServiceCards = () => {
+    const serviceItems = document.querySelectorAll('.services li');
+    if (!serviceItems || window.innerWidth <= 1024) return
 
-    return box.top + window.pageYOffset;
+    serviceItems.forEach((item, index) => {
+
+        createScrollAnimation({
+            elem: item,
+            scale: 0.9 + (index / 100),
+            start: `top 20%`,
+            end: `+=${item.getBoundingClientRect().height / 2}`
+        })
+
+    })
+
+
+    function createScrollAnimation(params) {
+        const scrollTrigger = {
+            trigger: params.elem,
+            start: params.start,
+            end: params.end,
+            scrub: !0,
+            markers: true,
+        }
+
+        console.log(scrollTrigger);
+
+
+        gsap.to(params.elem, {
+            scale: params.scale,
+            rotateX: "-10deg",
+            immediateRender: !0,
+            scrollTrigger: scrollTrigger,
+        })
+    }
 }
-
- 
