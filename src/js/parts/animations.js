@@ -93,7 +93,7 @@ export const animateServiceCards = () => {
         createScrollAnimation({
             elem: item,
             scale: 0.9 + (index / 100),
-            start: `top 20%`,
+            start: `top 45%`,
             end: `+=${item.getBoundingClientRect().height / 2}`
         })
 
@@ -101,22 +101,46 @@ export const animateServiceCards = () => {
 
 
     function createScrollAnimation(params) {
-        const scrollTrigger = {
-            trigger: params.elem,
-            start: params.start,
-            end: params.end,
-            scrub: !0,
-            markers: true,
-        }
-
-        console.log(scrollTrigger);
-
-
         gsap.to(params.elem, {
             scale: params.scale,
             rotateX: "-10deg",
             immediateRender: !0,
-            scrollTrigger: scrollTrigger,
+            scrollTrigger: {
+                trigger: params.elem,
+                start: params.start,
+                end: params.end,
+                // scrub: !0,
+                scrub: 1,
+                // markers: true,
+            },
         })
     }
+}
+
+export const animateAdvantages = () => {
+    const advantagesItems = document.querySelectorAll('.advantages-card');
+    if (!advantagesItems || window.innerWidth <= 1024) return
+
+    let width = 40
+
+    advantagesItems.forEach(item => {
+        width += item.getBoundingClientRect().width;
+    });
+
+    console.log(width);
+
+
+    gsap.to('.advantages ol', {
+        x: -width,
+        immediateRender: !0,
+        scrollTrigger: {
+            trigger: '.advantages',
+            start: 'top top',
+            end: `+=${width}`,
+            // scrub: !0,
+            scrub: 1,
+            markers: true,
+            pin: true
+        },
+    })
 }
