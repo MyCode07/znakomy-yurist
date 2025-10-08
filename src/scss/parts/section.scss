@@ -289,10 +289,14 @@
 }
 
 .blog {
+    position: relative;
+
     .section__title {
         align-items: flex-start;
 
         @media (min-width:1025px) {
+            position: sticky;
+            top: 100px;
             padding-right: 40px;
         }
 

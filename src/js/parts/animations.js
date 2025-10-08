@@ -1,10 +1,94 @@
 import { gsap } from 'gsap'
-// import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin.js';
-// import { MotionPathPlugin } from 'gsap/MotionPathPlugin.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
 
 gsap.registerPlugin(ScrollTrigger);
-// gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animate(entry.target);
+        }
+    })
+});
+
+function animate(elem) {
+    const delay = elem.dataset.delay ? elem.dataset.delay * 1000 : 0
+
+    if (elem.hasAttribute('data-animate-left')) {
+        setTimeout(() => {
+            elem.removeAttribute('data-animate-left');
+        }, delay);
+    }
+    if (elem.hasAttribute('data-animate-right')) {
+        setTimeout(() => {
+            elem.removeAttribute('data-animate-right');
+        }, delay);
+    }
+    if (elem.hasAttribute('data-animate-top')) {
+        setTimeout(() => {
+            elem.removeAttribute('data-animate-top');
+        }, delay);
+    }
+    if (elem.hasAttribute('data-animate-bottom')) {
+        setTimeout(() => {
+            elem.removeAttribute('data-animate-bottom');
+        }, delay);
+    }
+    if (elem.hasAttribute('data-animate-opacity')) {
+        setTimeout(() => {
+            elem.removeAttribute('data-animate-opacity');
+        }, delay);
+    }
+    if (elem.hasAttribute('data-animate-svg')) {
+        setTimeout(() => {
+            elem.removeAttribute('data-animate-svg');
+        }, delay);
+    }
+}
+
+const animateElems = document.querySelectorAll('[data-animate]');
+export const animateAction = () => {
+    if (!animateElems.length) return;
+
+    animateElems.forEach(elem => {
+        observer.observe(elem);
+    })
+}
+
+// stagger animations
+const observerStagger = new IntersectionObserver((entries, self) => {
+    let targets = entries
+        .map(entry => {
+            if (entry.isIntersecting) {
+                self.unobserve(entry.target)
+                return entry.target;
+            }
+        })
+        .filter(item => item != undefined);
+
+    animateStagger(targets)
+});
+
+function animateStagger(elem) {
+    gsap.to(elem, {
+        opacity: 1,
+        duration: 0.4,
+        x: 0,
+        y: 0,
+        y: 0,
+        ease: 'easeInOut',
+        stagger: 0.2,
+    });
+}
+
+const animateElemsStagger = document.querySelectorAll('[data-animate-stagger]');
+export const animateStaggerAction = () => {
+    if (!animateElemsStagger.length) return
+    animateElemsStagger.forEach(elem => {
+        observerStagger.observe(elem);
+    })
+}
 
 export const animateOrder = () => {
     if (window.innerWidth <= 768) return;
@@ -148,7 +232,7 @@ export const animateAdvantages = () => {
     if (svg) {
         gsap.to(svg, {
             clipPath: "inset(0% 0% 0% 0%)",
-            x: (-width + 40) / 2,
+            x: '-25%',
             scrollTrigger: {
                 trigger: '.advantages',
                 start: 'top top',
