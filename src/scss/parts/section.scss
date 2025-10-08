@@ -86,6 +86,7 @@
         pointer-events: none;
         width: 200vw;
         max-width: none;
+        clip-path: inset(0 100% 0 0);
 
         @media (max-width:1024px) {
             display: none;
@@ -134,17 +135,18 @@
         align-items: flex-end;
         gap: -1px;
 
-        @media (max-width:1024px) {
-            display: grid;
-            gap: 15px;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
         @media (min-width:1025px) {
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
             left: 100%;
+        }
+
+        @media (max-width:1024px) {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            transform: none !important;
         }
 
         @media (max-width:600px) {

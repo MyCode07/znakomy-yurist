@@ -1,8 +1,10 @@
 import { gsap } from 'gsap'
+// import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin.js';
+// import { MotionPathPlugin } from 'gsap/MotionPathPlugin.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
 
 gsap.registerPlugin(ScrollTrigger);
-
+// gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
 
 export const animateOrder = () => {
     if (window.innerWidth <= 768) return;
@@ -119,6 +121,7 @@ export const animateServiceCards = () => {
 
 export const animateAdvantages = () => {
     const advantagesItems = document.querySelectorAll('.advantages-card');
+    const svg = document.querySelector('.advantages svg');
     if (!advantagesItems || window.innerWidth <= 1024) return
 
     let width = 40
@@ -126,8 +129,6 @@ export const animateAdvantages = () => {
     advantagesItems.forEach(item => {
         width += item.getBoundingClientRect().width;
     });
-
-    console.log(width);
 
 
     gsap.to('.advantages ol', {
@@ -139,8 +140,21 @@ export const animateAdvantages = () => {
             end: `+=${width}`,
             // scrub: !0,
             scrub: 1,
-            markers: true,
-            pin: true
+            // markers: true,
+            pin: true,
         },
     })
+
+    if (svg) {
+        gsap.to(svg, {
+            clipPath: "inset(0% 0% 0% 0%)",
+            x: (-width + 40) / 2,
+            scrollTrigger: {
+                trigger: '.advantages',
+                start: 'top top',
+                end: `+=${width}`,
+                scrub: 1,
+            }
+        })
+    }
 }

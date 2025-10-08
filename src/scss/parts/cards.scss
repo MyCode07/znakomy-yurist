@@ -66,6 +66,12 @@
             transform-origin: top;
         }
     }
+
+    @media (max-width:1024px) {
+        li {
+            transform: none !important;
+        }
+    }
 }
 
 .services-card {
@@ -188,6 +194,7 @@
     background-size: cover;
     border: 1px solid $stroke_light_grey;
     border-radius: 4px;
+    min-height: 100%;
 
     @media (min-width:1025px) {
         min-width: 400px;
