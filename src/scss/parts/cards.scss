@@ -384,7 +384,8 @@
         border: 1px solid $stroke_light_grey;
         transition: all 0.3s ease 0s;
 
-        svg {
+        svg,
+        img {
             fill: $accent;
             width: 24px;
             height: 24px;

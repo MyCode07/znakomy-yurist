@@ -7,7 +7,7 @@ body {
     font-style: normal;
     letter-spacing: normal;
     color: $default;
-    font-family: "InterTight";
+    font-family: "Inter Tight";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -268,6 +268,10 @@ h4 {
         height: 54px;
         border-radius: 4px;
         transition: all 0.3s ease 0s;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:not(.swiper-button-disabled) {
             background-color: $soft_blue;
@@ -284,14 +288,30 @@ h4 {
             }
         }
 
+        &.prev {
+
+            img,
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
         &.swiper-button-disabled {
             border-radius: 4px;
             border: 1px solid $stroke_light_grey;
             opacity: 0.5;
         }
 
-        svg {
+        svg,
+        img {
+            width: 24px;
+            height: 24px;
             fill: $accent;
+
+            @media (max-width:768px) {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 }
