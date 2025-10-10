@@ -7,7 +7,7 @@
     font-size: 16px;
     font-style: normal;
     line-height: 1;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, backdrop-filter 0.3s ease 0s, color 0.3s ease 0s;
 
     @media (max-width:1240px) {
         font-size: 14px;
@@ -18,7 +18,7 @@
     }
 
     &._sticky {
-        background: $white;
+        background-color: $white;
         box-shadow: 0 4px 4px 0 rgba(33, 83, 135, 0.10);
         backdrop-filter: blur(5px);
 
@@ -87,6 +87,7 @@
             }
 
             a {
+                color: inherit !important;
                 transition: all 0.3s ease 0s;
                 white-space: nowrap;
 
@@ -158,10 +159,15 @@
                 }
             }
         }
+
+        .header__phone {
+            color: inherit;
+        }
     }
 
     // .header__phone
     &__phone {
+        color: inherit !important;
         transition: all 0.3s ease 0s;
         white-space: nowrap;
 
@@ -194,6 +200,7 @@
             a {
                 transition: all 0.3s ease 0s;
                 white-space: nowrap;
+                color: inherit !important;
 
                 @media (any-hover: hover) {
                     &:hover {

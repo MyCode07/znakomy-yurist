@@ -7,6 +7,7 @@
 })
 
 <main>
+
     <section class="section hero">
         <img class="hero__bgi" src="img/hero.png" alt="">
         <div class="section__container _container">
@@ -295,23 +296,22 @@
                 <p class="_subtitle">Опишите с чем вы столкнулись. <br>
                     Какая марка автомобиля, год выпуска, характер повреждений?<br>
                     Эта информация поможет нам в возврате денег со страховой</p>
-                <form action="#" class="form">
-                    <div class="form__item" data-required>
-                        <input type="text" name="name" id="name" placeholder="Имя *">
-                    </div>
-                    <div class="form__item" data-required>
-                        <input type="text" name="phone" id="phone" placeholder="Номер телефона *" inputmode="text">
-                    </div>
-                    <div class="form__item">
-                        <textarea name="msg" id="msg" placeholder="Сообщение"></textarea>
-                    </div>
+                <div class="form">
+                    <script data-b24-form="inline/167/qvop35" data-skip-moving="true">
+                        (function (w, d, u) {
+                            var s = d.createElement('script');
+                            s.async = true;
+                            s.src = u + '?' + (Date.now() / 180000 | 0);
+                            var h = d.getElementsByTagName('script')[0];
+                            h.parentNode.insertBefore(s, h);
+                        })(window, document, 'https://cdn-ru.bitrix24.ru/b14789828/crm/form/loader_167.js');
+                    </script>
                     <div class="form__button">
-                        <p>Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с <br>
+                        <p class="form-privacy">Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с <br>
                             <a href="privacy-policy.html" target="_blank">политикой конфиденциальности.</a>
                         </p>
-                        <button class="_btn _btn-accent" type="submit"><span>Оставить заявку</span></button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -381,7 +381,22 @@
     <section class="section reviews">
         <div class="section__container _container">
             <div class="section__body">
-                <h2 data-animate-bottom data-animate>Отзывы</h2>
+                <div class="section__title">
+                    <h2 data-animate=""><label>Более 1000</label> человек по всей стране<br> <label>доверяют нам</label>
+                        ведение своего дела</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="reviews-item">
+                        <iframe style="width:100%;height:100%;box-sizing:border-box;border:1px solid #e6e6e6;"
+                            src="https://yandex.ru/maps-reviews-widget/60516042477?comments"></iframe>
+                    </div>
+                    <div class="reviews-item">
+                        <iframe id="big_light_70000001041160020" frameborder="0" width="100%" height="824px"
+                            sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+                        <script
+                            type="text/javascript">((r, p) => { const l = document.getElementById(r); l.contentWindow.document.open(), l.contentWindow.document.write(decodeURIComponent(escape(atob(p)))), l.contentWindow.document.close() })("big_light_70000001041160020", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nbGlnaHQnOwogICAgd2luZG93Ll9fYnJhbmNoSWRfXz0nNzAwMDAwMDEwNDExNjAwMjAnCiAgICB3aW5kb3cuX19vcmdJZF9fPScnCiAgIDwvc2NyaXB0PjxzY3JpcHQgY3Jvc3NvcmlnaW49ImFub255bW91cyIgdHlwZT0ibW9kdWxlIiBzcmM9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2lmcmFtZS5qcyI+PC9zY3JpcHQ+PGxpbmsgcmVsPSJtb2R1bGVwcmVsb2FkIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5qcyI+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5jc3MiPjwvaGVhZD48Ym9keT48ZGl2IGlkPSJpZnJhbWUiPjwvZGl2PjwvYm9keT4=")</script>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -629,7 +644,7 @@
                 <div class="section__right">
                     <img src="img/map.png" alt="">
 
-                    <div>
+                    <div class="return-baloon">
                         <h4>Наш офис</h4>
                         <a href="">420138 <br>
                             г. Казань, проспект Победы, 46Б</a>
@@ -638,7 +653,7 @@
             </div>
         </div>
     </section>
-    
+
 </main>
 
 @@include('./html/footer.html')

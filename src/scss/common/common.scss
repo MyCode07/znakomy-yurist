@@ -7,7 +7,7 @@ body {
     font-style: normal;
     letter-spacing: normal;
     color: $default;
-    font-family: "Inter Tight";
+    font-family: "InterTight";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -61,6 +61,9 @@ figure {
     max-width: 100%;
     height: auto;
 }
+
+// rewrite parent theme styles
+@import "parts/wp";
 
 h1,
 h2,

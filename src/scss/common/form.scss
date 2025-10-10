@@ -24,7 +24,7 @@
         }
 
         textarea {
-            height: 160px;
+            height: 200px;
             resize: none;
 
             @media (max-width:1024px) {
@@ -78,8 +78,6 @@
                 max-width: 400px;
                 width: 100%;
             }
-
-
         }
     }
 }

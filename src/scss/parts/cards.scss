@@ -85,6 +85,7 @@
     background-color: $white;
     transition: all 0.3s ease 0s;
     margin-inline: auto;
+    color: $default;
 
     @media (any-hover: hover) {
         &:hover {
@@ -264,6 +265,7 @@
     padding: 40px 0;
     border-top: 1px solid $stroke_light_grey;
     transition: all 0.3s ease 0s;
+    color: $default;
 
     @media (max-width:1024px) {
         padding-top: 15px;
@@ -386,6 +388,10 @@
             fill: $accent;
             width: 24px;
             height: 24px;
+
+            path {
+                fill: $accent;
+            }
 
             @media (max-width:1024px) {
                 width: 20px;

@@ -30,6 +30,7 @@
         height: 100vh;
         object-fit: cover;
         pointer-events: none;
+        object-position: top;
 
         @media (max-width:768px) {
             height: 60vh;

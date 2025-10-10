@@ -1,0 +1,256 @@
+.popup {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: $black, $alpha: 0.7);
+    overflow: auto;
+    padding: 200px $padding + px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease 0s;
+
+    @media (max-width:1240px) {
+        padding: 100px 15px;
+    }
+
+    &._open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    // .popup-close
+    &-close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 35px;
+        height: 35px;
+        background-color: $accent;
+        border-radius: 2px;
+        z-index: 1;
+
+        @media (max-width:768px) {
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        span {
+            position: absolute;
+            width: 24px;
+            height: 1px;
+            top: 50%;
+            left: 50%;
+            background-color: $white;
+            pointer-events: none;
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            @media (max-width:768px) {
+                width: 20px;
+            }
+
+            &:first-child {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+
+    // .popup-privacy
+    &-privacy {
+        font-size: 14px;
+        line-height: 130%;
+        color: $secondary;
+        margin-top: 10px;
+        max-width: 340px;
+
+        @media (max-width:425px) {
+            font-size: 12px;
+        }
+
+        a {
+            color: $default;
+        }
+    }
+
+    .form {
+        margin-inline: auto;
+        width: 100%;
+        max-width: 700px;
+        position: relative;
+        padding: 30px;
+        border-radius: 4px;
+        background-color: $white;
+
+        @media (max-width:768px) {
+            width: 100%;
+            max-width: none;
+            padding: 30px 15px 50px 15px;
+        }
+    }
+
+    .b24-form,
+    .b24-form-wrapper {
+        position: relative;
+
+        @media (max-width:768px) {
+            position: static;
+        }
+    }
+
+    .b24-form-sign {
+        position: absolute;
+        right: 0;
+        bottom: -30px;
+
+        @media (max-width:768px) {
+            bottom: 12px;
+            left: 0;
+            right: 50%;
+            transform: translate(50%, 0);
+        }
+    }
+}
+
+.b24-form {
+    font-family: "Inter Tight";
+
+    * {
+        font-family: "Inter Tight";
+    }
+
+    button[type="submit"],
+    input[type="submit"] {
+        height: 60px;
+        border-radius: 4px;
+        padding: 15px 40px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -0.1px;
+        margin-top: 40px;
+        color: $white;
+        background-color: $accent;
+
+        @media (max-width:768px) {
+            margin-top: 30px;
+        }
+
+        &:hover {
+            background-color: $accent_hover;
+        }
+    }
+
+    .b24-form-header {
+        padding: 0;
+        border-bottom: 0;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .b24-form-header-title {
+        color: $default;
+        font: unset;
+        font-size: 28px;
+        word-break: break-word;
+        margin-bottom: 0;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+
+        @media (max-width:768px) {
+            font-size: 22px;
+        }
+    }
+
+    .b24-form-header-description {
+        margin: 0;
+        font: unset;
+        font-size: 16px;
+        opacity: 1;
+        color: $accent;
+        margin-top: 15px;
+        line-height: 130%;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+    }
+
+    .b24-form-padding-side {
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .b24-form-control-list .b24-form-control,
+    .b24-form-control-select .field-item,
+    .b24-form-control-string .b24-form-control,
+    .b24-form-control-text .b24-form-control,
+    .b24-form-control-alert.b24-form-control-checkbox,
+    .b24-form-control-alert.b24-form-control-file,
+    .b24-form-control-alert.b24-form-control-list .b24-form-control,
+    .b24-form-control-alert.b24-form-control-radiobox,
+    .b24-form-control-alert.b24-form-control-string .b24-form-control,
+    .b24-form-control-alert.b24-form-control-text .b24-form-control {
+        background-color: transparent !important;
+        border-color: $stroke_light_grey !important;
+        height: 62px;
+        border: 0 !important;
+        border-radius: 0 !important;
+        border-bottom: 1px solid $stroke_light_grey !important;
+        color: $default;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        padding: 0;
+
+        @media (max-width:768px) {
+            height: 50px;
+            font-size: 16px;
+        }
+
+        &::placeholder {
+            color: $secondary;
+        }
+    }
+
+    .b24-form-field {
+        margin-bottom: 0 !important;
+    }
+
+    .b24-form-control-label {
+        color: $secondary;
+        padding: 0;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .b24-form-sign {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        display: none !important;
+    }
+
+    textarea {
+        height: 200px !important;
+        resize: none !important;
+
+        @media (max-width:768px) {
+            height: 100px !important;
+        }
+    }
+
+    .b24-form-control-not-empty + .b24-form-control-label,
+    .b24-form-control-select-label,
+    .b24-form-control:focus + .b24-form-control-label {
+        top: 0px !important;
+    }
+}

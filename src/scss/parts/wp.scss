@@ -1,0 +1,65 @@
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    margin-bottom: 0;
+    margin: 0;
+}
+
+ol.wp-block-list:before,
+ol:not([class]):before,
+p:before,
+ul.wp-block-list:before,
+ul:not([class]):before {
+    display: none !important;
+}
+
+button:hover,
+button:focus,
+button:active {
+    outline: none !important;
+}
+
+.mypopup-modal {
+    width: 100% !important;
+    max-width: 700px !important;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 4px;
+
+    @media (max-width:768px) {
+        padding: 30px 15px;
+        width: calc(100% - 30px) !important;
+    }
+}
+
+.mypopup-body p + p {
+    margin-top: 0;
+}
+
+.mypopup-modal-close {
+    top: 15px !important;
+    right: 15px !important;
+
+    @media (max-width:768px) {
+        top: 10px !important;
+        right: 10px !important;
+    }
+
+    svg,
+    img {
+        width: 35px !important;
+        height: 35px !important;
+
+        @media (max-width:768px) {
+            width: 30px !important;
+            height: 30px !important;
+        }
+    }
+}
