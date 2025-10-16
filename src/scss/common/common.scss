@@ -176,6 +176,7 @@ h4 {
     line-height: 1;
     letter-spacing: -0.1px;
     transition: color 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+    white-space: nowrap;
 
     @media (max-width:1024px) {
         height: 54px;
@@ -183,7 +184,7 @@ h4 {
     }
 
     @media (max-width:425px) {
-        padding-inline: 15px;
+        padding-inline: 30px;
     }
 
     // ._btn-accent
@@ -191,10 +192,8 @@ h4 {
         color: $white;
         background-color: $accent;
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $accent_hover;
-            }
+        &:hover {
+            background-color: $accent_hover;
         }
     }
 
@@ -204,11 +203,9 @@ h4 {
         background-color: $white;
         border: 1px solid $white;
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: unset;
-                color: $white;
-            }
+        &:hover {
+            background-color: unset;
+            color: $white;
         }
     }
 
@@ -217,12 +214,10 @@ h4 {
         border: 1px solid $stroke_light_grey;
         color: $accent;
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $accent;
-                color: $white;
-                border-color: $accent;
-            }
+        &:hover {
+            background-color: $accent;
+            color: $white;
+            border-color: $accent;
         }
     }
 
@@ -231,29 +226,27 @@ h4 {
         border: 1px solid $stroke_white_15;
         color: $white;
 
-        @media (any-hover: hover) {
-            &:hover {
-                border-color: $white;
-            }
+        &:hover {
+            border-color: $white;
         }
     }
 }
 
 ._desktop {
     @media (max-width:1024px) {
-        display: none;
+        display: none !important;
     }
 }
 
 ._mobile {
     @media (min-width:1025px) {
-        display: none;
+        display: none !important;
     }
 }
 
 .swiper-controll {
     display: flex;
-    gap: 4px;
+    gap:10px;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
@@ -276,14 +269,12 @@ h4 {
         &:not(.swiper-button-disabled) {
             background-color: $soft_blue;
 
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $accent;
-                    border-color: $accent;
+            &:hover {
+                background-color: $accent;
+                border-color: $accent;
 
-                    svg {
-                        fill: $white;
-                    }
+                svg {
+                    fill: $white;
                 }
             }
         }

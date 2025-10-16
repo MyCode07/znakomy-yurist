@@ -65,10 +65,12 @@
             width: fit-content;
             transition: box-shadow 0.3s ease 0s;
 
-            @media (any-hover: hover) {
-                &:hover {
-                    box-shadow: inset 0 0 0 1px $white;
-                }
+            @media (max-width:768px) {
+                border: 1px solid $stroke_white_15;
+            }
+
+            &:hover {
+                box-shadow: inset 0 0 0 1px $white;
             }
 
             @media (max-width:1024px) {

@@ -14,7 +14,13 @@
             padding: 20px 0;
 
             &::placeholder {
-                color: $secondary;
+                color: $white_50;
+                opacity: 1;
+            }
+
+            &::-webkit-input-placeholder {
+                /* Chrome, Safari, Opera */
+                color: $white_50;
                 opacity: 1;
             }
 
@@ -56,7 +62,7 @@
 
         @media (max-width:1024px) {
             gap: 30px;
-            padding-top: 30px;
+            padding-top: 20px;
         }
 
         p {

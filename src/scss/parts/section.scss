@@ -87,6 +87,7 @@
         width: 200vw;
         max-width: none;
         clip-path: inset(0 100% 0 0);
+        stroke: $stroke_light_grey;
 
         @media (max-width:1024px) {
             display: none;
@@ -182,8 +183,7 @@
         }
     }
 
-    img,
-    picture {
+    .bgi {
         @media (min-width:1025px) {
             position: absolute;
             z-index: -1;
@@ -219,7 +219,7 @@
 
         @media (max-width:1024px) {
             background-color: $accent;
-            padding: 30px 0 30px 0;
+            padding: 20px 0 20px 0;
         }
 
         h2 {
@@ -228,6 +228,7 @@
 
             @media (max-width:1024px) {
                 color: $white;
+                margin-bottom: 15px;
 
                 * {
                     color: $white;
@@ -237,7 +238,7 @@
 
         ._subtitle {
             color: $secondary;
-            @include adaptive-value('margin-bottom', 50, 30, 1);
+            @include adaptive-value('margin-bottom', 50, 0, 1);
 
             @media (max-width:1200px) {
                 br {
@@ -249,6 +250,7 @@
                 color: $white_50;
                 max-width: 75%;
                 width: 100%;
+                margin-bottom: 15px;
             }
 
             @media (max-width:768px) {
@@ -262,6 +264,10 @@
             p {
                 color: $white_50;
 
+                br {
+                    display: none;
+                }
+
                 a {
                     color: $white;
                 }
@@ -269,11 +275,7 @@
         }
 
         // .form-privacy
-        &-privacy {
-            @media (max-width:475px) {
-                max-width: 260px;
-            }
-        }
+        &-privacy {}
     }
 
     input,
@@ -334,6 +336,14 @@
 .reviews {
     .section__title {
         @include adaptive-value('margin-bottom', 80, 30, 1);
+
+        h2 {
+            @media (max-width:600px) {
+                br {
+                    display: none;
+                }
+            }
+        }
     }
 
     .grid {
@@ -364,7 +374,6 @@
 
         @media (max-width:1024px) {
             flex-direction: column;
-            gap: 30px;
         }
     }
 

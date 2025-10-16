@@ -136,6 +136,8 @@
             }
 
             span {
+                display: block;
+                margin-bottom: 15px;
                 color: $secondary;
             }
         }
@@ -155,7 +157,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
-                gap: 10px;
+                gap: 30px;
                 padding: 15px;
                 grid-column: span 2;
 

@@ -153,10 +153,8 @@
             transition: all 0.3s ease 0s;
             white-space: nowrap;
 
-            @media (any-hover: hover) {
-                &:hover {
-                    opacity: 0.5;
-                }
+            &:hover {
+                opacity: 0.5;
             }
         }
 
