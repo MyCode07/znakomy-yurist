@@ -104,7 +104,7 @@ if (sliders.length) {
 
                     },
                     1025: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 15,
                     },
                 }
@@ -137,7 +137,7 @@ if (sliders.length) {
 
                     },
                     1025: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 15,
                     },
                 }

@@ -6,10 +6,10 @@
 "class":"",
 })
 
-<main>
+<main class="widgets">
     <section class="section hero">
         <img class="hero__bgi" src="img/hero.png" alt="">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="hero__ratings">
                     <a href="" data-animate-bottom data-animate-stagger>
@@ -47,8 +47,7 @@
     </section>
 
     <section class="section reviews-widgets">
-        <img class="bgi" src="img/reviews-widgets-bgi.png" alt="">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__title">
                     <label class="_titles_label _small_uppercase" data-animate-bottom data-animate-stagger>Узнайте свою
@@ -256,7 +255,7 @@
     </section>
 
     <section class="section calltoaction">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <img class="_logo" src="img/icons/logo-hand.svg" alt="">
                 <h2>
@@ -299,66 +298,10 @@
         </div>
     </section>
 
-    <section class="section form-section widget-form-section">
-        <img class="bgi" src="img/form-bgi.png" alt="">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div>
-
-                    <h2>
-                        <label>Расскажите нам о своей ситуации и</label>
-                        мы поможем вам вернуть деньги
-                    </h2>
-                    <ol>
-                        <li>
-                            <span>1</span>
-                            <p>Полностью “под ключ”</p>
-                        </li>
-                        <li>
-                            <span>2</span>
-                            <p>Без предоплат</p>
-                        </li>
-                        <li>
-                            <span>3</span>
-                            <p>Сохранив выгодные условия</p>
-                        </li>
-                    </ol>
-                </div>
-
-                <div class="section__bottom">
-                    <div class="social">
-                        <a href="">
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <use xlink:href='img/svg/icons.svg#wh' />
-                            </svg>
-                        </a>
-                        <a href="">
-                            <svg width="20" height="16" viewBox="0 0 20 16">
-                                <use xlink:href='img/svg/icons.svg#tg' />
-                            </svg>
-                        </a>
-                        <a href="">
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <use xlink:href='img/svg/icons.svg#vk' />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="section__actions _desktop">
-                        <a href="" class="_btn _btn-accent">Заказать звонок</a>
-                        <a href="" class="_btn _btn-grey-stroke">+7 (843) 233-45-23</a>
-                    </div>
-                    <div class="section__actions _mobile">
-                        <a href="" class="_btn _btn-white">Заказать звонок</a>
-                        <a href="" class="_btn _btn-white-stroke">+7 (843) 233-45-23</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="section blog widget-blog">
-        <div class="section__container _container">
-            <div class="section__body grid grid-2">
+        <div class="section__container ">
+            <div class="section__body">
                 <div>
                     <div class="section__title" data-animate-bottom data-animate>
                         <h2>Блок с результатами</label>
@@ -367,7 +310,6 @@
                             Результаты возврата <br>
                             навязанных услуг по автокредиту
                         </p>
-                        <button class="_btn _btn-grey-stroke _desktop">Смотреть все</button>
                     </div>
                 </div>
                 <ul>
@@ -412,26 +354,20 @@
                         </a>
                     </li>
                 </ul>
-                <button class="_btn _btn-grey-stroke _mobile" data-animate-bottom data-animate-stagger>Смотреть
+                <button class="_btn _btn-grey-stroke" data-animate-bottom data-animate-stagger>Смотреть
                     все</button>
             </div>
         </div>
     </section>
 
-    <section class="section advantages">
-        <svg width="3840" height="1080" viewBox="0 0 3840 1080">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M0.0977047 524.91C238.947 548.347 621.559 550.22 993.107 479.668C1364.68 409.111 1725.06 266.144 1919.6 0L1920 0.297388L1920.4 0C2114.94 266.144 2475.32 409.111 2846.89 479.668C3218.44 550.22 3601.05 548.347 3839.9 524.91L3840 525.91C3765.6 533.21 3677.26 538.419 3579.65 540C3677.26 541.581 3765.6 546.79 3840 554.09L3839.9 555.09C3601.05 531.653 3218.44 529.78 2846.89 600.332C2475.32 670.889 2114.94 813.856 1920.4 1080L1920 1079.7L1919.6 1080C1725.06 813.856 1364.68 670.889 993.107 600.332C621.559 529.78 238.947 531.653 0.0977047 555.09L0 554.09C74.4 546.79 162.742 541.581 260.352 540C162.742 538.419 74.4 533.21 0 525.91L0.0977047 524.91ZM385.289 540C573.26 542.999 785.011 559.794 993.292 599.344C1364.67 669.864 1725.14 812.747 1920 1078.86C2114.86 812.747 2475.33 669.864 2846.71 599.344C3054.99 559.794 3266.74 542.999 3454.71 540C3266.74 537.001 3054.99 520.206 2846.71 480.656C2475.33 410.136 2114.86 267.254 1920 1.14538C1725.14 267.253 1364.67 410.136 993.292 480.656C785.011 520.206 573.26 537.001 385.289 540Z" />
-        </svg>
-
-        <div class="section__container _container">
+    <section class="section widget-advantages">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__title">
                     <label class="_titles_label _small_uppercase">Наши преимущества — ваши выгоды</label>
                     <h2 class="_big_title">Почему с нами <label>выиграть</label> <br>
                         у страховой — <label>реально</label>?</label>
                     </h2>
-                    <span class="_small_uppercase">потому что</span>
                 </div>
             </div>
             <ol>
@@ -486,7 +422,7 @@
     </section>
 
     <section class="section faq widget-faq">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__title" data-animate-bottom data-animate>
                     <h2>Часто задаваемые <label>вопросы</label></h2>
@@ -567,7 +503,7 @@
     </section>
 
     <section class="section articles">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__title" data-animate="">
                     <h2>Доверьте <br>
@@ -671,8 +607,8 @@
         </div>
     </section>
 
-    <section class="section video">
-        <div class="section__container _container">
+    <section class="section video  widget-video">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__title" data-animate-bottom data-animate>
                     <h2>Подробнее о нас на видео</h2>
@@ -698,7 +634,7 @@
     </section>
 
     <section class="section reviews-slider">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__title" data-animate="">
                     <label class="_titles_label _small_uppercase">Мы работаем для вас!</label>
@@ -904,15 +840,15 @@
     </section>
 
     <section class="section quiz">
-        <div class="section__container _container">
+        <div class="section__container ">
             <div class="section__body">
                 <h2>Квиз</h2>
             </div>
         </div>
     </section>
 
-    <section class="section return">
-        <div class="section__container _container">
+    <section class="section return widget-return">
+        <div class="section__container ">
             <div class="section__body">
                 <div class="section__left">
                     <div class="section__title">

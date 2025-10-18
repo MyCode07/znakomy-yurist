@@ -15,7 +15,6 @@
     &__item {
         height: fit-content;
         padding: 20px;
-        padding-bottom: 40px;
         border-radius: 4px;
         background-color: $soft_blue;
         transition: all 0.3s ease 0s;
@@ -28,11 +27,15 @@
 
         @media (max-width:1024px) {
             padding: 15px;
-            padding-bottom: 30px;
         }
 
         &[data-open] {
             background-color: $accent;
+            padding-bottom: 40px;
+
+            @media (max-width:1024px) {
+                padding-bottom: 30px;
+            }
 
             h4 {
                 color: $white;

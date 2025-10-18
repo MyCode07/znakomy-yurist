@@ -473,7 +473,7 @@
         position: relative;
         border-radius: 4px;
         overflow: hidden;
-        @include adaptive-value('height', 920, 300, 1);
+        @include adaptive-value('height', 920, 194, 1);
         cursor: pointer;
 
         @media (any-hover: hover) {

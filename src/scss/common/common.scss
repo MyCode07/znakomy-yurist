@@ -112,6 +112,10 @@ h4 {
     }
 }
 
+h5{
+    line-height: 110%;
+}
+
 ._subtitle {
     @include adaptive-value('font-size', 20, 16, 1);
     line-height: 1.3;
