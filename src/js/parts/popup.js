@@ -4,6 +4,10 @@ import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
+    if (!document.querySelector('.custom-page')) {
+        return;
+    }
+
     if (targetEl.hasAttribute('data-open-popup')) {
         e.preventDefault();
         const id = targetEl.getAttribute('data-open-popup');

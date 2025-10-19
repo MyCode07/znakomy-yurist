@@ -1,36 +1,61 @@
-// null default styles
-@import "null";
-// load fonts
-@import "fonts";
-//load variables
-@import "common/variables";
-// load mixins
-@import "mixins";
-// load swiper
-@import "../../node_modules/swiper/swiper";
-// load common
-@import "common/common";
-// load animations
-@import "common/animations";
-// load header
-@import "common/header";
-// load footer
-@import "common/footer";
-// load form
-@import "common/form";
-// load side popup
-@import "common/popup";
-// load footer
-@import "common/menu";
-// load accordeon
-@import "common/accordeon";
-// load grid
-@import "parts/grid";
-// load section
-@import "parts/section";
-// load hero
-@import "parts/hero";
-// load section
-@import "parts/cards";
-// load widgets
-@import "parts/widgets";
+.custom-page {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    // null default styles
+    @import "null";
+    // load fonts
+    @import "fonts";
+    //load variables
+    @import "common/variables";
+    // load mixins
+    @import "mixins";
+    // load swiper
+    @import "../../node_modules/swiper/swiper";
+    scroll-behavior: smooth;
+    font-style: normal;
+    letter-spacing: normal;
+    color: $default;
+    font-family: "Inter Tight";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    background-color: $white;
+
+    @media (max-width:1024px) {
+        font-size: 14px;
+    }
+
+    // load common
+    @import "common/common";
+    // load animations
+    @import "common/animations";
+    // load header
+    @import "common/header";
+    // load footer
+    @import "common/footer";
+    // load form
+    @import "common/form";
+    // load side popup
+    @import "common/popup";
+    // load footer
+    @import "common/menu";
+    // load accordeon
+    @import "common/accordeon";
+    // load grid
+    @import "parts/grid";
+    // load section
+    @import "parts/section";
+    // load hero
+    @import "parts/hero";
+    // load section
+    @import "parts/cards";
+    // load widgets
+    @import "parts/widgets";
+}

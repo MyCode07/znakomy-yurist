@@ -96,50 +96,7 @@ export const animateOrder = () => {
     const supportLines = gsap.utils.toArray(".order-item");
     const order = document.querySelector('.order');
 
-    // const distanceFromTop = getCoords(order);
-
-    // if (supportLines.length) {
-    //     const list = document.querySelector('.order-items');
-    //     const smallTimeline = gsap.timeline();
-    //     let height = 0;
-
-    //     supportLines.forEach((item, i) => {
-    //         if (i != 0) {
-    //             height += item.getBoundingClientRect().height;
-    //             height += window.innerHeight * 0.6 - i * 67;
-
-    //             const rect = item.getBoundingClientRect();
-    //             const initialTop = rect.top; // Позиция до трансформаций (если transform не применялся)
-    //             // height += rect.top + window.scrollY; // Текущая позиция с учётом скролла
-    //         }
-    //     });
-
-    //     console.log(height);
-
-    //     ScrollTrigger.create({
-    //         trigger: '.order',
-    //         start: "top 50px",
-    //         end: `+=${height}`,
-    //         scrub: 0.75,
-    //         markers: true,
-    //         invalidateOnRefresh: true,
-    //         pin: true,
-    //         // animation: smallTimeline,
-    //         onUpdate: self => {
-    //             let progress = self.progress
-
-    //             let top = window.scrollY - distanceFromTop + 50
-    //             console.log(top);
-
-    //             list.scrollTop = top
-    //         }
-    //     })
-
-
-    //     smallTimeline.to(supportLines, {
-    //         // y: 0,
-    //     })
-    // }
+    if (!supportLines.length) return
 
     let top = document.querySelector('.header').getBoundingClientRect().height;
     top += 50
