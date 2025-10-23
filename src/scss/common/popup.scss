@@ -79,7 +79,7 @@
     .form {
         margin-inline: auto;
         width: 100%;
-        max-width: 700px;
+        max-width: 400px;
         position: relative;
         padding: 30px;
         border-radius: 4px;
@@ -114,9 +114,10 @@
             button {
                 position: relative;
                 left: 0;
-                right: 0;
                 top: 0;
                 bottom: 0;
+                right: 0;
+                transform: none;
             }
         }
 

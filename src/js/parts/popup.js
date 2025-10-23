@@ -1,6 +1,3 @@
-import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
-
-
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
@@ -11,21 +8,28 @@ document.addEventListener('click', function (e) {
     if (targetEl.hasAttribute('data-open-popup')) {
         e.preventDefault();
         const id = targetEl.getAttribute('data-open-popup');
-        const popup = document.querySelector(`.popup#${id}`);
+        let popup = document.querySelector(`.popup#${id}`);
+        if (id == 'popup-widget') {
+            popup = document.querySelector(`.popup-widget`);
+        }
 
         if (popup) {
             popup.classList.add('_open')
-            lockPadding();
         }
     }
 
-    if (targetEl.classList.contains('popup')) {
+    if (targetEl.classList.contains('popup') || targetEl.classList.contains('popup-widget')) {
         targetEl.classList.remove('_open')
         closePopup(targetEl)
     }
 
     if (targetEl.classList.contains('popup-close') || targetEl.hasAttribute('data-close-popup')) {
-        const popup = targetEl.closest('.popup');
+        let popup = targetEl.closest('.popup');
+
+        if (targetEl.closest('.popup-widget')) {
+            popup = document.querySelector(`.popup-widget`);
+        }
+
         closePopup(popup)
     }
 })
@@ -33,5 +37,4 @@ document.addEventListener('click', function (e) {
 
 function closePopup(popup) {
     popup.classList.remove('_open')
-    unLockPadding();
 }

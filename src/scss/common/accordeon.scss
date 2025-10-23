@@ -112,8 +112,13 @@
             &-height {
                 overflow: hidden;
 
+                a {
+                    text-decoration: underline;
+                    color: $default;
+                }
+
                 p {
-                    color: $white_50;
+                    color: rgba($color: $white, $alpha: 0.85);
 
                     @media (min-width:769px) {
                         max-width: 75%;
