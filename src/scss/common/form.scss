@@ -86,4 +86,42 @@
             }
         }
     }
+
+    // .form-social
+    &-social {
+        margin-top: 20px;
+        text-align: center;
+
+        span {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 0.75em;
+            margin-top: 0;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+
+            a {
+                flex: 0 0 auto;
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $accent;
+
+                img,
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    flex: 0 0 auto;
+                }
+            }
+        }
+    }
 }

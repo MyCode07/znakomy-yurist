@@ -94,6 +94,15 @@
                 bottom: 15px;
             }
 
+            &[data-open-popup="callback_2"] {
+                left: unset;
+                right: 50px;
+
+                @media (max-width:768px) {
+                    right: 15px;
+                }
+            }
+
             img,
             svg {
                 pointer-events: none;
