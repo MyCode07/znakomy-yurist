@@ -725,6 +725,12 @@
                 text-align: left;
             }
         }
+
+        .flex {
+            gap: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     .form-section {
@@ -782,6 +788,50 @@
     @media (max-width: 1024px) {
         .reviews-slider .swiper-controll {
             margin-top: 15px;
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        @media (max-width:1024px) {
+            gap: 6px;
+        }
+
+        a {
+            width: 60px;
+            height: 60px;
+            border: 1px solid $stroke_light_grey;
+            border-radius: 4px;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease 0s;
+
+            &:hover {
+                background-color: $stroke_light_grey;
+            }
+
+            @media (max-width:1024px) {
+                width: 45px;
+                height: 45px;
+            }
+
+            img,
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: $accent;
+
+                @media (max-width:1024px) {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
         }
     }
 
@@ -867,50 +917,6 @@
 
                     @media (max-width:1024px) {
                         font-size: 16px;
-                    }
-                }
-            }
-        }
-
-        .social {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-
-            @media (max-width:1024px) {
-                gap: 6px;
-            }
-
-            a {
-                width: 60px;
-                height: 60px;
-                border: 1px solid $stroke_light_grey;
-                border-radius: 4px;
-                flex: 0 0 auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: background-color 0.3s ease 0s;
-
-                &:hover {
-                    background-color: $stroke_light_grey;
-                }
-
-                @media (max-width:1024px) {
-                    width: 45px;
-                    height: 45px;
-                }
-
-                img,
-                svg {
-                    width: 20px;
-                    height: 20px;
-                    fill: $accent;
-
-                    @media (max-width:1024px) {
-                        width: 16px;
-                        height: 16px;
                     }
                 }
             }
