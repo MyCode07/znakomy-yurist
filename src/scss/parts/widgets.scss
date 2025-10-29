@@ -730,6 +730,7 @@
             gap: 10px;
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
         }
     }
 
@@ -853,33 +854,21 @@
         }
 
         ol {
-            margin-top: 40px;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
+            margin-top: 30px;
 
-            @media (max-width:1024px) {
-                margin-bottom: 40px;
-                margin-top: 30px;
-            }
+            @media (max-width:1024px) {}
 
             li {
                 padding-left: 0;
-                padding-bottom: 20px;
                 display: flex;
                 align-items: center;
-                gap: 20px;
                 border-bottom: 1px solid $stroke_light_grey;
-
-                @media (max-width:1024px) {
-                    gap: 10px;
-                    padding-bottom: 10px;
-                }
+                gap: 10px;
+                padding-bottom: 10px;
 
                 &:not(:last-child) {
-                    margin-bottom: 20px;
-
-                    @media (max-width:1024px) {
-                        margin-bottom: 10px;
-                    }
+                    margin-bottom: 10px;
                 }
 
                 &:before {
@@ -929,5 +918,9 @@
             gap: 10px;
             border-top: 1px solid $stroke_light_grey;
         }
+    }
+
+    .opening-hours {
+        flex-direction: column;
     }
 }
