@@ -1,5 +1,13 @@
 .acf-widget {
     width: 100%;
+    font-family: Montserrat, Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: 500;
+    }
 
     ol,
     ul,
@@ -28,6 +36,12 @@
 
         label {
             display: inline;
+        }
+    }
+
+    @media (max-width: 425px) {
+        ._btn {
+            padding-inline: 20px;
         }
     }
 
@@ -922,5 +936,9 @@
 
     .opening-hours {
         flex-direction: column;
+    }
+
+    .video h5 {
+        @include adaptive-value('font-size', 18, 14, 1);
     }
 }
