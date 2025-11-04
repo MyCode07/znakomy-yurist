@@ -29,6 +29,7 @@ function sldierActions() {
             });
         }
         if (slider.closest('.team')) {
+            let count = slider.dataset.slide ?? 4
             new Swiper(slider, {
                 modules: [
                     Navigation, Pagination
@@ -55,7 +56,7 @@ function sldierActions() {
 
                     },
                     1025: {
-                        slidesPerView: 4,
+                        slidesPerView: count,
                         spaceBetween: 15,
                     },
                 }
