@@ -5,6 +5,7 @@ import "./parts/popup.js";
 import { accorden } from "./static/accordeon.js";
 import { animateAction, animateAdvantages, animateOrder, animateServiceCards, animateStaggerAction } from "./parts/animations.js";
 import { stickyHeader } from "./parts/header.js";
+import { Fancybox } from "@fancyapps/ui";
 
 if (document.querySelector('.custom-page')) {
     accorden();
@@ -14,4 +15,8 @@ if (document.querySelector('.custom-page')) {
     animateServiceCards();
     animateOrder();
     animateAdvantages();
+
+
+    Fancybox.bind("[data-fancybox]", {
+    });
 }

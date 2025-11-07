@@ -430,6 +430,23 @@
     }
 }
 
+.gallery {
+    .swiper-slide {
+        height: auto;
+
+        a {
+            display: block;
+            height: 100%;
+        }
+
+        img,
+        picture {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
 .team-card {
 
     img,

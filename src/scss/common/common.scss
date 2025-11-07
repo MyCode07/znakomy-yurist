@@ -7,12 +7,19 @@ body {
     font-style: normal;
     letter-spacing: normal;
     color: $default;
-    font-family: "Inter Tight";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
     background-color: $white;
+
+    &:not(:has(.acf-widget)) {
+        font-family: "Inter Tight";
+    }
+
+    &:has(.acf-widget) {
+        font-family: "Montserrat", sans-serif;
+    }
 
     &._noscroll {
         overflow: hidden;
@@ -112,7 +119,7 @@ h4 {
     }
 }
 
-h5{
+h5 {
     line-height: 110%;
 }
 
@@ -250,7 +257,7 @@ h5{
 
 .swiper-controll {
     display: flex;
-    gap:10px;
+    gap: 10px;
     align-items: center;
     justify-content: flex-end;
     width: 100%;

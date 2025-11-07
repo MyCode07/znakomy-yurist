@@ -18,8 +18,12 @@ function sldierActions() {
         if (slider.closest('.about')) {
             new Swiper(slider, {
                 modules: [
-                    Pagination
+                    Pagination, Autoplay
                 ],
+                autoplay: {
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                },
                 spaceBetween: 16,
                 slidesPerView: 1,
                 pagination: {
@@ -32,8 +36,49 @@ function sldierActions() {
             let count = slider.dataset.slide ?? 4
             new Swiper(slider, {
                 modules: [
-                    Navigation, Pagination
+                    Navigation, Pagination, Autoplay
                 ],
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+                autoplay: {
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 15,
+
+                    },
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                    },
+                    769: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                        autoplay: false
+                    },
+                    1025: {
+                        slidesPerView: count,
+                        spaceBetween: 15,
+                        autoplay: false
+                    },
+                }
+            });
+        }
+        if (slider.closest('.gallery')) {
+            let count = slider.dataset.slide ?? 4
+            new Swiper(slider, {
+                modules: [
+                    Navigation, Pagination, Autoplay
+                ],
+                autoplay: {
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                },
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
