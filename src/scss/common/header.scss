@@ -7,7 +7,8 @@
     font-size: 16px;
     font-style: normal;
     line-height: 1;
-    transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, backdrop-filter 0.3s ease 0s, color 0.3s ease 0s;
+    transition: background 0.3s ease 0s, box-shadow 0.3s ease 0s, backdrop-filter 0.3s ease 0s, color 0.3s ease 0s;
+    background: linear-gradient(180deg, $black, rgba($color: $black, $alpha: 0));
 
     @media (max-width:1240px) {
         font-size: 14px;
@@ -18,12 +19,20 @@
     }
 
     &._sticky {
-        background-color: $white;
+        background: $white;
         box-shadow: 0 4px 4px 0 rgba(33, 83, 135, 0.10);
         backdrop-filter: blur(5px);
 
         * {
             color: $default;
+        }
+
+        .header__logo {
+            width: 125px;
+
+            @media (min-width:1025px) {
+                @include adaptive-value('width', 125, 70, 1);
+            }
         }
 
         .header__logo-sticky {
@@ -105,16 +114,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex: 0 0 auto;
+        width: 125px;
+        transition: width 0.3s ease 0s;
+        will-change: width;
+
+        @media (min-width:1025px) {
+            @include adaptive-value('width', 180, 70, 1);
+        }
 
         svg,
         img,
         picture {
             flex: 0 0 auto;
-            width: 125px;
-
-            @media (min-width:1025px) {
-                @include adaptive-value('width', 125, 70, 1);
-            }
+            width: 100%;
         }
 
         // .header__logo-fixed

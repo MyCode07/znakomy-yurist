@@ -801,3 +801,40 @@ section {
         }
     }
 }
+
+.logos {
+    .swiper {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .swiper-slide {
+        height: 200px;
+
+        @media (max-width:768px) {
+            height: 100px;
+        }
+    }
+
+    .logo-item {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border: 1px solid $accent_10;
+
+        @media (max-width:768px) {
+            padding: 10px;
+        }
+
+        img,
+        picture,
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

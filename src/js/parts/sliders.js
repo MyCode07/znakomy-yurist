@@ -107,6 +107,43 @@ function sldierActions() {
                 }
             });
         }
+        if (slider.closest('.logos')) {
+            let count = slider.dataset.slide ?? 4
+            new Swiper(slider, {
+                modules: [
+                    Autoplay, Navigation
+                ],
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+                autoplay: {
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+
+                    },
+                    769: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+
+                    },
+                    1025: {
+                        slidesPerView: count,
+                        spaceBetween: 15,
+                    },
+                }
+            });
+        }
+
         if (slider.closest('.section__flex-box')) {
             let prev = slider.closest('.section__flex-box').querySelector('.prev');
             let next = slider.closest('.section__flex-box').querySelector('.next');
