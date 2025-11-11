@@ -318,6 +318,16 @@ h5 {
     }
 }
 
+.prev,
+.next {
+
+    img,
+    svg,
+    picture {
+        pointer-events: none;
+    }
+}
+
 .opening-hours {
     display: flex;
     gap: 10px;

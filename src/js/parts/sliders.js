@@ -77,13 +77,14 @@ function sldierActions() {
                 ],
                 autoplay: {
                     delay: 3000,
-                    pauseOnMouseEnter: true,
+                    pauseOnMouseEnter: false,
+                    disableOnInteraction: false,
+                    stopOnLastSlide: false,
                 },
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
                 },
-
                 breakpoints: {
                     300: {
                         slidesPerView: 1,
@@ -108,7 +109,7 @@ function sldierActions() {
             });
         }
         if (slider.closest('.logos')) {
-            let count = slider.dataset.slide ?? 4
+            let count = slider.dataset.slide ?? 5
             new Swiper(slider, {
                 modules: [
                     Autoplay, Navigation
@@ -119,7 +120,9 @@ function sldierActions() {
                 },
                 autoplay: {
                     delay: 3000,
-                    pauseOnMouseEnter: true,
+                    pauseOnMouseEnter: false,
+                    disableOnInteraction: false,
+                    stopOnLastSlide: false,
                 },
                 breakpoints: {
                     300: {
@@ -134,7 +137,6 @@ function sldierActions() {
                     769: {
                         slidesPerView: 3,
                         spaceBetween: 15,
-
                     },
                     1025: {
                         slidesPerView: count,

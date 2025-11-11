@@ -43,6 +43,12 @@
             display: none;
         }
 
+        .header__right button,
+        .header__phone {
+            color: $white !important;
+            background-color: $accent;
+        }
+
         .header__burger {
             border-color: $accent;
 
@@ -158,13 +164,18 @@
         div {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             width: 100%;
         }
 
         button {
             transition: all 0.3s ease 0s;
             white-space: nowrap;
+            color: $default !important;
+            padding: 10px 14px;
+            border-radius: 2px;
+            background-color: $white;
+            height: 40px;
 
             &:hover {
                 opacity: 0.5;
@@ -181,6 +192,14 @@
         color: inherit !important;
         transition: all 0.3s ease 0s;
         white-space: nowrap;
+        color: $default !important;
+        padding: 10px 14px;
+        border-radius: 2px;
+        background-color: $white;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width:1240px) {
             font-size: 13px;

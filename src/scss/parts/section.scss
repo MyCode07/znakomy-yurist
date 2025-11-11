@@ -804,8 +804,8 @@ section {
 
 .logos {
     .swiper {
-        max-width: 1200px;
         margin-inline: auto;
+        max-width: 1200px;
     }
 
     .swiper-slide {
@@ -823,7 +823,7 @@ section {
         align-items: center;
         justify-content: center;
         padding: 15px;
-        border: 1px solid $accent_10;
+        border: 1px solid $black_25;
 
         @media (max-width:768px) {
             padding: 10px;
