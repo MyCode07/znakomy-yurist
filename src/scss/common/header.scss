@@ -276,4 +276,32 @@
 
         &._active {}
     }
+
+    // .header__search1
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        margin-left: 30px;
+
+        @media (max-width:1440px) {
+            margin-left: 0;
+        }
+
+        img,
+        svg {
+            fill: currentColor;
+            pointer-events: none;
+            width: 15px;
+            height: 15px;
+            flex: 0 0 auto;
+
+            path {
+                fill: currentColor;
+            }
+        }
+    }
 }

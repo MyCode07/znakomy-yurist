@@ -35,4 +35,12 @@ document.addEventListener('click', function (e) {
     if (!targetEl.hasAttribute('data-open-search') && !targetEl.closest('.search') && searchPopup && searchPopup.classList.contains('_open')) {
         searchPopup.classList.remove('_open');
     }
+
+    if (targetEl.classList.contains('header__search')) {
+        document.querySelector('.search-popup').classList.add('_open');
+    }
+
+    if (targetEl.classList.contains('search-popup')) {
+        targetEl.classList.remove('_open');
+    }
 })

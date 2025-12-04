@@ -145,7 +145,6 @@ function sldierActions() {
                 }
             });
         }
-
         if (slider.closest('.section__flex-box')) {
             let prev = slider.closest('.section__flex-box').querySelector('.prev');
             let next = slider.closest('.section__flex-box').querySelector('.next');
