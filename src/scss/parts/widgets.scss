@@ -697,16 +697,26 @@
         background-color: transparent;
 
         @media (max-width:1024px) {
-            .section__body {
-                background-color: transparent;
+            h2 {
+                label {}
             }
 
-            h2 {
-                color: $default;
+            .social a {
+                background-color: $white;
+            }
 
-                label {
-                    color: $accent;
-                }
+            ._btn-accent {
+                background-color: $white;
+                color: $default;
+            }
+
+            ._btn-grey-stroke {
+                color: $white;
+            }
+        }
+
+        @media (max-width:768px) {
+            .section__body {
             }
         }
 
@@ -714,7 +724,9 @@
             margin-bottom: 40px;
             margin-top: 30px;
 
-            @media (max-width:1024px) {}
+            @media (max-width:1024px) {
+                color: $white;
+            }
 
             li {
                 padding-left: 0;
@@ -740,7 +752,6 @@
                     width: 50px;
                     height: 50px;
                     font-style: normal;
-                    color: $default;
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 130%;
@@ -756,7 +767,6 @@
                 }
 
                 span {
-                    color: $default;
                     font-size: 18px;
                     font-weight: 400;
                     line-height: 130%;
@@ -774,6 +784,10 @@
             padding-top: 20px;
             gap: 10px;
             border-top: 1px solid $stroke_light_grey;
+
+            @media (max-width:600px) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 

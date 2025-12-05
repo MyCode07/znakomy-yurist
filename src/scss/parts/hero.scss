@@ -9,6 +9,7 @@
         align-items: flex-end;
         justify-content: space-between;
         height: 100vh;
+        max-height: 1080px;
         padding-top: 90px;
         padding-bottom: 40px;
         gap: 40px;
@@ -63,7 +64,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100vw;
+        max-height: 1080px;
+        width: 100%;
         height: 100vh;
         object-fit: cover;
         pointer-events: none;
@@ -89,6 +91,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            object-position: center;
         }
     }
 

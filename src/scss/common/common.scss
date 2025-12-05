@@ -38,6 +38,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 1920px;
+    margin-inline: auto;
 }
 
 main {
@@ -49,10 +51,10 @@ main {
     width: 100%;
     margin-inline: auto;
     max-width: $container + px;
+    padding-inline: $padding + px;
 
     @media (max-width: $containerWithPadding + px) {
         max-width: none;
-        padding-inline: $padding + px;
     }
 
     @media (max-width:1240px) {

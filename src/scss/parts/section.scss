@@ -705,6 +705,7 @@
         gap: 10px;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     .social {
@@ -715,6 +716,11 @@
 
         @media (max-width:1024px) {
             gap: 6px;
+        }
+
+        @media (max-width:600px) {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         a {
@@ -1084,7 +1090,7 @@ section {
 
 .home-docs {
     ._container {
-        max-width: 920px;
+        max-width: 1000px;
     }
 
     .section__title {
@@ -1336,5 +1342,17 @@ section {
             min-height: 100%;
             object-fit: cover;
         }
+    }
+}
+
+.important-post {
+    ._container {
+        max-width: 1000px;
+    }
+
+    .section__title {
+        position: static;
+        align-items: center;
+        text-align: center;
     }
 }
