@@ -735,7 +735,13 @@
             transition: background-color 0.3s ease 0s;
 
             &:hover {
-                background-color: $stroke_light_grey;
+                background-color: $white !important;
+                border-color: $white !important;
+
+                img,
+                svg {
+                    fill: $accent !important;
+                }
             }
 
             @media (max-width:1024px) {
@@ -747,7 +753,7 @@
             svg {
                 width: 20px;
                 height: 20px;
-                fill: $accent;
+                fill: $white !important;
 
                 @media (max-width:1024px) {
                     width: 16px;
