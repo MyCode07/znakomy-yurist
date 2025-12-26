@@ -1426,7 +1426,7 @@ section {
 
 .important-post {
     ._container {
-        max-width: 1000px;
+        max-width: 1280px;
     }
 
     .section__title {
@@ -1442,6 +1442,12 @@ section {
 
     .blog-card__content h3 {
         display: none;
+    }
+
+    .blog-card__data {
+        @media (min-width:769px) {
+            display: none;
+        }
     }
 
     .blog-card__button {
