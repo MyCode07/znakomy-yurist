@@ -1453,6 +1453,12 @@ section {
     .blog-card__button {
         top: 0;
     }
+
+    .articles-card {
+        @media (min-width:769px) {
+            max-width: 400px;
+        }
+    }
 }
 
 #docs {
