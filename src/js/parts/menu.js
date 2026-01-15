@@ -9,7 +9,7 @@ const searchPopup = document.querySelector('.search');
 const arrow = `<button><svg width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.25"/></svg></button>`;
 
 // add menu summenu opener button
-const submenuList = document.querySelectorAll('.menu ul li');
+const submenuList = [...document.querySelectorAll('.menu ul li'), ...document.querySelectorAll('.header ul li'), ...document.querySelectorAll('.header__left div')];
 if (submenuList.length) {
     submenuList.forEach(li => {
         const submenu = li.querySelector('ul');
@@ -28,7 +28,10 @@ if (submenuList.length) {
     })
 
     function toggleMenu(item) {
-        const menu = item.closest('ul');
+        let menu = item.closest('ul');
+        if (item.closest('.header__left')) {
+            menu = item.closest('div');
+        }
         const menuItems = menu.querySelectorAll('li');
 
         if (!item.hasAttribute('data-open')) {

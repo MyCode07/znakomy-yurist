@@ -71,6 +71,7 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
+                gap: 10px;
 
                 &:not(:last-child) {
                     border-bottom: 1px solid $stroke_light_grey;
@@ -88,12 +89,12 @@
                 }
 
                 button {
-                    width: 20px;
+                    width: auto;
+                    flex: 1 1 auto;
                     height: 20px;
-                    flex: 0 0 auto;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-end;
 
                     img,
                     svg {
@@ -120,7 +121,7 @@
             }
 
             a {
-                width: calc(100% - 60px);
+                width: fit-content;
             }
         }
     }
