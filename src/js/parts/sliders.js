@@ -242,31 +242,27 @@ function sldierActions() {
             });
         }
         if (slider.closest('.example')) {
-            let count = slider.dataset.slide ?? 4
+            let count = slider.dataset.slide ?? 4.2
             new Swiper(slider, {
                 modules: [
-                    Navigation, Pagination, Autoplay
+                    Navigation, Pagination
                 ],
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
                 },
-                autoplay: {
-                    delay: 3000,
-                    pauseOnMouseEnter: true,
-                },
                 breakpoints: {
                     300: {
-                        slidesPerView: 1,
+                        slidesPerView: 1.1,
                         spaceBetween: 15,
 
                     },
                     600: {
-                        slidesPerView: 2,
+                        slidesPerView: 2.2,
                         spaceBetween: 15,
                     },
                     769: {
-                        slidesPerView: 3,
+                        slidesPerView: 3.2,
                         spaceBetween: 15,
                         autoplay: false
                     },

@@ -12,6 +12,10 @@ function videoAction() {
             const iframe = videoBox.querySelector('.iframe');
 
             function playVideo() {
+                if (!preview) {
+                    return;
+                }
+
                 // Скрываем элементы
                 preview.style.display = 'none';
                 playButton.style.display = 'none';
@@ -26,7 +30,9 @@ function videoAction() {
             }
 
             // Вешаем обработчики на клик
-            playButton.addEventListener('click', playVideo);
+            if (playButton) {
+                playButton.addEventListener('click', playVideo);
+            }
             videoBox.addEventListener('click', playVideo);
         }
     })
