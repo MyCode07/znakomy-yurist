@@ -274,6 +274,37 @@ function sldierActions() {
                 }
             });
         }
+
+        if (slider.closest('.cases')) {
+            new Swiper(slider, {
+                modules: [
+                    Autoplay
+                ],
+                autoplay: {
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 15,
+                    },
+                    600: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 15,
+                    },
+                    769: {
+                        spaceBetween: 20,
+                        autoplay: false
+                    },
+                    1025: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                        autoplay: false
+                    },
+                }
+            });
+        }
     })
 }
 sldierActions();
