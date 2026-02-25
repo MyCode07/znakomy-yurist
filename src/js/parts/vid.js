@@ -6,10 +6,9 @@ function videoAction() {
     const videoBoxes = document.querySelectorAll('.video__box');
     videoBoxes.forEach(videoBox => {
         if (videoBox) {
-            const videoBoxIframe = videoBox.querySelector('iframe');
             const preview = videoBox.querySelector('.video__box-preview');
             const playButton = videoBox.querySelector('.video__box-play');
-            const iframe = videoBox.querySelector('.iframe');
+            const iframe = videoBox.querySelector('iframe');
 
             function playVideo() {
                 if (!preview) {
@@ -19,7 +18,7 @@ function videoAction() {
                 // Скрываем элементы
                 preview.style.display = 'none';
                 playButton.style.display = 'none';
-                videoBoxIframe.style.pointerEvents = 'all';
+                iframe.style.pointerEvents = 'all';
 
                 // Запускаем видео (добавляем autoplay параметр к src)
                 const currentSrc = iframe.src;

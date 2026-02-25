@@ -32,6 +32,14 @@ document.addEventListener('click', function (e) {
 
         closePopup(popup)
     }
+
+    if (targetEl.classList.contains('popup-hero-social')) {
+        const social = document.querySelector('.hero ._social');
+        if (social) {
+            social.classList.toggle('_active')
+            targetEl.classList.toggle('_active')
+        }
+    }
 })
 
 

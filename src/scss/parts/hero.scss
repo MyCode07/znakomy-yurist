@@ -300,3 +300,42 @@
         }
     }
 }
+
+.popup-hero-social {
+    @media (min-width:1025px) {
+        display: none !important;
+    }
+}
+
+.hero ._social {
+    @media (max-width:1024px) {
+        position: fixed;
+        left: 50px;
+        bottom: 165px;
+        top: unset;
+        z-index: 5;
+        gap: 4px;
+
+        a {
+            width: 50px;
+            height: 50px;
+            background-color: $accent;
+            backdrop-filter: none;
+
+            img,
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &._active {
+            display: flex;
+        }
+    }
+
+    @media (max-width:768px) {
+        left: 15px;
+        bottom: 80px;
+    }
+}

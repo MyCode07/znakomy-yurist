@@ -745,6 +745,7 @@
     height: 100%;
     // padding-bottom: 178%;
     padding-bottom: 178%;
+    cursor: pointer;
 
     &:before {
         position: absolute;
@@ -765,6 +766,7 @@
         align-items: center;
         gap: 10px;
         z-index: 1;
+        display: none;
 
         svg,
         img {
@@ -787,6 +789,10 @@
         width: 100%;
         height: 100%;
 
+        &:not:has(iframe) {
+            pointer-events: none;
+        }
+
         video,
         img,
         iframe,
@@ -800,6 +806,72 @@
 
         iframe {
             pointer-events: all;
+        }
+    }
+
+    // .example-card_preview
+    &__preview {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    // .example-card__play
+    &__play {
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 4px;
+        background-color: $black_25;
+        transition: all 0.3s ease 0s;
+
+        @media (max-width:1024px) {
+            width: 50px;
+            height: 50px;
+            left: 15px;
+            bottom: 15px;
+        }
+
+        svg,
+        img,
+        picture {
+            width: 30px;
+            height: 30px;
+
+            @media (max-width:1024px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &._play {
+
+        .example-card__preview,
+        .example-card__play {
+            display: none;
+        }
+
+        .example-card__image {
+
+            video,
+            img,
+            iframe,
+            picture {
+                pointer-events: all;
+            }
         }
     }
 }
